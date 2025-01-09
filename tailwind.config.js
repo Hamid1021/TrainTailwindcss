@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors');
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   darkMode: 'class',
@@ -6,7 +7,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // رنگ‌های Tailwind
         transparent: 'transparent',
         current: 'currentColor',
         black: colors.black,
@@ -19,7 +19,6 @@ module.exports = {
         indigo: colors.indigo,
         purple: colors.purple,
         pink: colors.pink,
-        // رنگ‌های سفارشی
         primary: {
           light: '#d6e6ff',
           DEFAULT: '#1e40af',
@@ -32,19 +31,11 @@ module.exports = {
         }
       },
       spacing: {
-        // مقادیر سفارشی فاصله‌ها
         72: '18rem',
         84: '21rem',
         96: '24rem'
       },
-      fontFamily: {
-        // فونت‌های سفارشی
-        sans: ['Helvetica', 'Arial', 'sans-serif'],
-        serif: ['Georgia', 'serif'],
-        mono: ['Menlo', 'monospace']
-      },
       fontSize: {
-        // اندازه‌های سفارشی فونت‌ها
         xs: '.75rem',
         sm: '.875rem',
         tiny: '.875rem',
@@ -59,14 +50,12 @@ module.exports = {
         '7xl': '5rem'
       },
       animation: {
-        // انیمیشن‌های سفارشی
         spin: 'spin 3s linear infinite',
         ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
         pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         bounce: 'bounce 1s infinite'
       },
       keyframes: {
-        // کلیدهای انیمیشن سفارشی
         spin: {
           '0%, 100%': { transform: 'rotate(0deg)' },
           '50%': { transform: 'rotate(180deg)' }
@@ -88,7 +77,6 @@ module.exports = {
   },
   variants: {
     extend: {
-      // انواع مختلف استایل‌ها برای حالت‌های مختلف
       backgroundColor: ['active', 'group-hover'],
       textColor: ['visited', 'group-hover'],
       opacity: ['disabled']
@@ -97,6 +85,15 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio')
+    require('@tailwindcss/aspect-ratio'),
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        '.hover-nav-li:hover': {
+          width: '100%',
+          height: '100%',
+          backgroundColor: '#0c4a6e' // bg-sky-900
+        }
+      });
+    })
   ]
 };
