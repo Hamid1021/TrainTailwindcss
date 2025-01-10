@@ -1,5 +1,4 @@
 const colors = require('tailwindcss/colors');
-const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   darkMode: 'class',
@@ -72,6 +71,9 @@ module.exports = {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-25%)' }
         }
+      },
+      screens: {
+        xs: '360px'
       }
     }
   },
@@ -85,15 +87,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
-    plugin(function ({ addUtilities }) {
-      addUtilities({
-        '.hover-nav-li:hover': {
-          width: '100%',
-          height: '100%',
-          backgroundColor: '#0c4a6e' // bg-sky-900
-        }
-      });
-    })
+    require('@tailwindcss/aspect-ratio')
   ]
 };

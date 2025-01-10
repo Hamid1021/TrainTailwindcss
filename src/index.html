@@ -8,56 +8,70 @@
     </head>
     <body class="bg-gray-100 text-gray-900">
         <div class="container mx-auto">
-            <nav class="shadow-md mt-5 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-80% h-16 flex items-center">
-                <ul class="grid grid-cols-4 justify-items-center w-full h-full">
-                    <li class="flex items-center justify-center hover-nav-li">
-                        <a href="#" class="text-white">صفحه اصلی</a>
+            <nav id="nav-items" class="h-16 mt-5">
+                <ul class="grid grid-cols-4 md:gap-x-20 nav-ul-responsive w-full h-full">
+                    <li class="nav-li">
+                        <a href="#">صفحه اصلی</a>
                     </li>
-                    <li class="flex items-center justify-center hover-nav-li"><a href="#" class="text-white">نوشته ها</a></li>
-                    <li class="flex items-center justify-center hover-nav-li">
-                        <a href="#" class="text-white">من کی هستم</a>
+                    <li class="nav-li">
+                        <a href="#">نوشته ها</a>
                     </li>
-                    <li class="flex items-center justify-center hover-nav-li">
-                        <a href="#" class="text-white">انیمه های من</a>
+                    <li class="nav-li">
+                        <a href="#">من کی هستم</a>
+                    </li>
+                    <li class="nav-li">
+                        <a href="#">انیمه های من</a>
                     </li>
                 </ul>
             </nav>
 
             <main class="my-8">
-                <section class="mb-8 grid grid-flow-row grid-cols-6 border gap-x-1">
-                    <div class="col-span-4 order-1 border">
+                <section id="about-me" class="mb-8 grid md:grid-cols-6 gap-4 border">
+                    <div class="md:col-span-2 flex justify-center items-center border">
+                        <img class="w-full h-auto rounded-lg border-2 border-sky-300 shadow-lg" src="./img/img2.jpg" alt="Picture" />
+                    </div>
+                    <div class="md:col-span-4 border p-4">
                         <h1 class="text-3xl font-bold my-4 mx-3">درباره من</h1>
-                        <p class="text-lg text-wrap mx-3">
-                            من حمیدرضا رضایی هستم فارغ التحصیل رشته مهندسی کامپیوتر از کلاس اول دبستان عاشق کامپیوتر بودم هستم و خواهم بود اما بنا به دلیل هایی
-                            رفتم رشته تجربی خوندم و از آناتومی بدن اطلاعات زیادی پیدا کردم اما عشقم به کامپیوتر کم نشد و در دانشگاه رشته کامپیوتر رو انتخاب کردم
-                            و الان مهندس کامپیوتر شد بلافاصله زبان برنامه نویسی پایتون رو یاد گرفتم و رفتم سراغ وب چون کد نویسی رو خیلی دوست داشتم فقط کد نویسی
-                            بک اند رو یاد گرفتم با فرم ورک جنگو
+                        <p class="text-lg mx-3 text-justify">
+                            من حمیدرضا رضایی هستم فارغ التحصیل رشته مهندسی کامپیوتر از کلاس اول دبستان عاشق کامپیوتر بودم هستم و خواهم بود اما بنا به دلیل هایی رفتم رشته تجربی خوندم و از آناتومی بدن
+                            اطلاعات زیادی پیدا کردم اما عشقم به کامپیوتر کم نشد و در دانشگاه رشته کامپیوتر رو انتخاب کردم و الان مهندس کامپیوتر شد بلافاصله زبان برنامه نویسی پایتون رو یاد گرفتم و رفتم
+                            سراغ وب چون کد نویسی رو خیلی دوست داشتم فقط کد نویسی بک اند رو یاد گرفتم با فرم ورک جنگو.
                         </p>
                     </div>
-                    <div class="col-span-2 border">
-                        <img src="./img/img1.jpg" alt="Picture" class="rounded-s-sm shadow-md h-[100%]" />
-                    </div>
                 </section>
-                <section class="mb-8">
+
+                <section id="last-blogs" class="mb-8">
                     <h2 class="text-2xl font-semibold mb-4">اخرین نوشته ها</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <div class="bg-white p-4 rounded-lg shadow-md">نوشته ۱</div>
-                        <div class="bg-white p-4 rounded-lg shadow-md">نوشته ۲</div>
-                        <div class="bg-white p-4 rounded-lg shadow-md">نوشته ۳</div>
-                        <div class="bg-white p-4 rounded-lg shadow-md">نوشته ۴</div>
+                    <div class="grid grid-cols-1 gap-y-4">
+                        <div class="blog-item-empty">
+                            <!-- <a href="#">خاطره اولین ورود من به دانشگاه.</a> -->
+                        </div>
+                        <div class="blog-item-empty">
+                            <!-- <a href="#">خاظره اولین باری که دوره خریدم.</a> -->
+                        </div>
+                        <div class="blog-item-empty">
+                            <!-- <a href="#">رفتم برای اولین بار انفورماتیک دانشگاه و فهمیدم چه جای خفنیه!</a> -->
+                        </div>
+                        <div class="blog-item-empty">
+                            <!-- <a href="#">خاطره فارغ التحصیل شدنم از دانشگاه.</a> -->
+                        </div>
                     </div>
                 </section>
-                <section class="mb-8">
+
+                <section id="my-proj" class="mb-8">
                     <h2 class="text-2xl font-semibold mb-4">پروژه های من</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <div class="bg-white p-4 rounded-lg shadow-md">پروژه ۱</div>
-                        <div class="bg-white p-4 rounded-lg shadow-md">پروژه ۲</div>
-                        <div class="bg-white p-4 rounded-lg shadow-md">پروژه ۳</div>
-                        <div class="bg-white p-4 rounded-lg shadow-md">پروژه ۴</div>
-                        <div class="bg-white p-4 rounded-lg shadow-md">پروژه ۵</div>
-                        <div class="bg-white p-4 rounded-lg shadow-md">پروژه ۶</div>
+                    <div id="projects">
+                        <div class="proj-item-empty responsive p-4 rounded-lg shadow-md">پروژه 1</div>
+                        <div class="proj-item-empty responsive p-4 rounded-lg shadow-md">پروژه 2</div>
+                        <div class="proj-item-empty responsive p-4 rounded-lg shadow-md">پروژه 3</div>
+                        <div class="proj-item-empty responsive p-4 rounded-lg shadow-md">پروژه 4</div>
+                        <div class="proj-item-empty responsive p-4 rounded-lg shadow-md">پروژه 5</div>
+                        <div class="proj-item-empty responsive p-4 rounded-lg shadow-md">پروژه 6</div>
+                        <div class="proj-item-empty responsive p-4 rounded-lg shadow-md">پروژه 7</div>
+                        <div class="proj-item-empty responsive p-4 rounded-lg shadow-md">پروژه 8</div>
                     </div>
                 </section>
+
                 <section class="mb-8">
                     <h2 class="text-2xl font-semibold mb-4">اخرین انیمه ها</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">

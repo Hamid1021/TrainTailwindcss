@@ -2,16 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* this is for nav bar */
+  .nav-li {
+    @apply bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-80% flex items-center justify-center w-full text-white;
+  }
+  .nav-li:hover {
+    @apply bg-none text-[#bffb60] hover:w-full hover:h-full hover:bg-sky-900;
+  }
+  .nav-ul-responsive {
+    @apply xs:gap-x-1 xs:text-[15px] xs:font-bold sm:gap-x-5 md:text-base md:py-0 sm:p-0;
+  }
 
-/* @layer base {
-    :root {
-        For rgb(255 115 179 / 1)
-        --color-primary: 255 115 179;
+  /* this is for my projects */
+  #projects {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-3 justify-self-center;
+  }
+  .proj-item-empty {
+    @apply bg-gray-400 animate-pulse text-transparent lg:justify-self-center lg:size-[230px] md:size-[230px] sm:size-[280px] xs:size-[340px];
+  }
+  .proj-item-full {
+    @apply content-center text-center bg-white p-4 rounded-lg shadow-md;
+  }
 
-        For hsl(333deg 100% 73% / 1)
-        --color-primary: 333deg 100% 73%;
-
-        For rgba(255, 115, 179, 1)
-        --color-primary: 255, 115, 179;
-    }
-} */
+  /* this is for my blogs */
+  .blog-item-full {
+    @apply h-[56px] hover:bg-none hover:bg-slate-400 bg-gradient-to-r from-slate-400 from-10% via-green-200 to-slate-100 p-4 rounded-lg shadow-lg font-bold text-base text-zinc-700;
+  }
+  .blog-item-empty {
+    @apply bg-gray-400 animate-pulse text-transparent h-[56px];
+  }
+}
