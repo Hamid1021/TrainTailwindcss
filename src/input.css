@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+@layer utilities {
   /* this is for nav bar */
   .nav-li {
     @apply bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-80% flex items-center justify-center w-full text-white;
@@ -19,17 +19,61 @@
     @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-3 justify-self-center;
   }
   .proj-item-empty {
-    @apply bg-gray-400 animate-pulse text-transparent lg:justify-self-center lg:size-[230px] md:size-[230px] sm:size-[280px] xs:size-[340px];
+    @apply p-4 rounded-lg shadow-md bg-gray-400 animate-pulse text-transparent lg:justify-self-center lg:size-[230px] md:size-[230px] sm:size-[280px] xs:size-[340px];
   }
   .proj-item-full {
-    @apply content-center text-center bg-white p-4 rounded-lg shadow-md;
+    @apply content-center text-center bg-white p-4 rounded-lg shadow-md lg:justify-self-center lg:size-[230px] md:size-[230px] sm:size-[280px] xs:size-[340px];
   }
 
   /* this is for my blogs */
   .blog-item-full {
-    @apply h-[56px] hover:bg-none hover:bg-slate-400 bg-gradient-to-r from-slate-400 from-10% via-green-200 to-slate-100 p-4 rounded-lg shadow-lg font-bold text-base text-zinc-700;
+    @apply h-[56px] hover:bg-none hover:bg-slate-400 bg-gradient-to-r from-slate-400 from-10% via-green-200 to-slate-100 p-4 rounded-lg shadow-lg font-bold text-base text-zinc-700 truncate;
   }
   .blog-item-empty {
     @apply bg-gray-400 animate-pulse text-transparent h-[56px];
+  }
+
+  /* this is for anime */
+  .anime-item-full {
+    @apply bg-white p-4 rounded-lg shadow-lg grid xs:grid-cols-2 xs:grid-rows-2 sm:grid-rows-1 sm:grid-flow-col xs:grid-flow-row grid-cols-5 sm:grid-cols-5 items-center xs:my-3;
+  }
+  .anime-item-empty {
+    @apply bg-white p-4 rounded-lg shadow-lg grid grid-cols-5 items-center;
+  }
+
+  .anime-img-empty {
+    @apply w-auto h-[140px] transition animate-pulse bg-gray-400 my-2 border-2 border-sky-500;
+  }
+  .anime-img-empty img {
+    @apply invisible;
+  }
+  .anime-img-full {
+    @apply w-auto h-[140px] bg-gray-400 border-2 border-sky-500;
+  }
+  .anime-img-full img {
+    @apply h-full w-auto bg-cover;
+  }
+
+  .anime-title-empty {
+    @apply w-11/12 h-3/4 mx-2 bg-gray-400 transition animate-pulse flex items-center justify-center;
+  }
+  .anime-title-empty h3 {
+    @apply invisible;
+  }
+  .anime-title-full {
+    @apply sm:text-center w-full h-full font-bold text-[18px] text-wrap flex items-center justify-center;
+  }
+
+  .anime-desc-empty {
+    @apply col-span-3 w-11/12 h-3/4 bg-gray-400 transition animate-pulse;
+  }
+  .anime-desc-empty p {
+    @apply invisible;
+  }
+  .anime-desc-full {
+    @apply col-span-3 w-full h-full flex items-center flex-wrap text-justify;
+  }
+  .anime-desc-full p {
+    @apply p-5;
   }
 }
