@@ -73,7 +73,8 @@ module.exports = {
         }
       },
       screens: {
-        xs: '360px'
+        xs: '360px',
+        '2xs': '285px'
       }
     }
   },

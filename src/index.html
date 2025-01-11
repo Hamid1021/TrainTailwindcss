@@ -42,9 +42,7 @@
             });
         </script>
     </head>
-    <body
-        class="dark:bg-gradient-to-br dark:from-[rgb(37,0,36)] dark:to-sky-300 bg-gradient-to-tr from-green-100 from-10% via-sky-500 via-30% to-emerald-200 to-90% text-white-900 relative"
-    >
+    <body class="text-white-900">
         <!-- Float Setting Panel -->
         <div class="group float-settings">
             <div class="w-10 flex flex-col items-center justify-center h-full p-2 group-hover:-translate-x-[20px] transition-all duration-300">
@@ -65,68 +63,36 @@
             </div>
         </div>
         <!-- End Float Setting Panel -->
-        <div class="container mx-auto -z-10">
-            <nav id="nav-items" class="h-20 w-full mt-5 border-y-2 border-y-fuchsia-950 py-2">
+        <div class="2xl:mx-[250px] xl:mx-[200px] lg:mx-[130px] mx-[50px] -z-10">
+            <nav id="nav-items" class="h-12 w-full mt-5 border-y-2 border-y-fuchsia-950 py-2">
                 <ul class="grid grid-cols-4 md:gap-x-15 nav-ul-responsive w-full h-full">
-                    <li class="nav-li border-2 border-sky-800 w-1/2 relative overflow-hidden">
+                    <li class="nav-li border-2 border-sky-800 w-1/2">
                         <a href="#">صفحه اصلی</a>
-                        <div class="flash-circle "></div>
                     </li>
-                    <li class="nav-li border border-sky-800 w-1/2 relative overflow-hidden">
+                    <li class="nav-li border-2 border-sky-800 w-1/2">
                         <a href="#">نوشته ها</a>
-                        <div class="flash-circle absolute w-0 h-0"></div>
                     </li>
-                    <li class="nav-li border border-sky-800 w-1/2 relative overflow-hidden">
+                    <li class="nav-li border-2 border-sky-800 w-1/2">
                         <a href="#">من کی هستم</a>
-                        <div class="flash-circle absolute w-0 h-0"></div>
                     </li>
-                    <li class="nav-li border border-sky-800 w-1/2 relative overflow-hidden">
+                    <li class="nav-li border-2 border-sky-800 w-1/2">
                         <a href="#">انیمه های من</a>
-                        <div class="flash-circle absolute w-0 h-0"></div>
                     </li>
                 </ul>
             </nav>
 
-            <script>
-                document.querySelectorAll('.nav-li').forEach(item => {
-                    const circle = item.querySelector('.flash-circle');
-
-                    item.addEventListener('mouseenter', () => {
-                        circle.style.width = '200%';
-                        circle.style.height = '200%';
-                        circle.style.opacity = '1';
-                        circle.style.border = '25px solid';
-
-                        circle.style.borderRadius = '50%';
-                        circle.style.top = '50%';
-                        circle.style.left = '50%';
-                        circle.style.transform = 'translate(-50%, -50%)';
-                        circle.style.transition = 'all 1s ease-in-out';
-                        setTimeout(() => {
-                            circle.style.width = '0';
-                            circle.style.height = '0';
-                            circle.style.opacity = '0';
-                            circle.style.border = 'none';
-                        }, 1000); // زمان انیمیشن
-                    });
-
-                    item.addEventListener('mouseleave', () => {
-                        circle.style.width = '0';
-                        circle.style.height = '0';
-                        circle.style.opacity = '0';
-                        circle.style.border = 'none';
-                    });
-                });
-            </script>
-
             <main class="my-8">
                 <section id="about-me" class="mb-8 grid md:grid-cols-6 gap-4 border">
                     <div class="md:col-span-2 flex justify-center items-center">
-                        <img class="h-auto md:h-[80%] lg:h-full rounded-lg shadow-lg w-[95%] xs:mt-2 lg:mt-0 md:mt-0" src="./img/img2.jpg" alt="Picture" />
+                        <img
+                            class="h-auto 2xs:mt-2 md:h-[55%] lg:h-[70%] rounded-lg shadow-lg w-[95%] xs:mt-2 lg:mt-0 md:mt-0"
+                            src="./img/img2.jpg"
+                            alt="Picture"
+                        />
                     </div>
-                    <div class="md:col-span-4 p-4 flex flex-col">
-                        <h1 class="dark:bg-gradient-to-tr from-[rgb(28,26,26)] dark:text-white font-bold mx-3 my-4 p-4 text-3xl">درباره من</h1>
-                        <p class="dark:bg-gradient-to-tr from-[rgb(28,26,26)] dark:text-white mx-3 p-5 text-justify text-lg self-start">
+                    <div class="md:col-span-4 p-4 flex flex-col 2xs:p-0 2xs:text-[8px] sm:text-[24px] sm:font-bold">
+                        <h1 class="dark:bg-gradient-to-tr from-[rgb(28,26,26)] dark:text-white font-bold mx-3 my-4 p-4 md:text-3xl">درباره من</h1>
+                        <p class="dark:bg-gradient-to-tr from-[rgb(28,26,26)] dark:text-white mx-3 p-5 text-justify md:text-lg self-start">
                             من حمیدرضا رضایی هستم فارغ التحصیل رشته مهندسی کامپیوتر از کلاس اول دبستان عاشق کامپیوتر بودم هستم و خواهم بود اما بنا به دلیل هایی
                             رفتم رشته تجربی خوندم و از آناتومی بدن اطلاعات زیادی پیدا کردم اما عشقم به کامپیوتر کم نشد و در دانشگاه رشته کامپیوتر رو انتخاب کردم
                             و الان مهندس کامپیوتر شد بلافاصله زبان برنامه نویسی پایتون رو یاد گرفتم و رفتم سراغ وب چون کد نویسی رو خیلی دوست داشتم فقط کد نویسی
@@ -136,7 +102,7 @@
                 </section>
 
                 <section id="last-blogs" class="mb-8">
-                    <h2 class="text-2xl font-semibold mb-4 dark:text-white">اخرین نوشته ها</h2>
+                    <h2 class="text-2xl 2xs:text-sm font-semibold mb-4 dark:text-white sm:text-[24px] sm:font-bold">اخرین نوشته ها</h2>
                     <div class="grid grid-cols-1 gap-y-4">
                         <div class="blog-item-full">
                             <a href="#">خاطره فارغ التحصیل شدنم از دانشگاه.</a>
@@ -161,23 +127,6 @@
                         </div>
                         <div class="blog-item-empty">
                             <a href="#"></a>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="my-proj" class="mb-8">
-                    <h2 class="text-2xl font-semibold mb-4">پروژه های من</h2>
-                    <div id="projects">
-                        <div class="proj-item-full p-0 m-0 grid grid-rows-3 grid-flow-row gap-y-15">
-                            <div class="proj-img flex justify-center align-top">
-                                <img src="/src/img/img5.jpg" class="h-24 w-auto" alt="" />
-                            </div>
-                            <div class="proj-title">
-                                <h3>پروژه وب سایت تهیه شده با فریم ورک های مهم</h3>
-                            </div>
-                            <div class="proj-link">
-                                <a href="">همین حالا تماشا کنید</a>
-                            </div>
                         </div>
                     </div>
                 </section>

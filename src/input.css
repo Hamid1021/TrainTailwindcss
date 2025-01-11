@@ -3,26 +3,19 @@
 @tailwind utilities;
 
 @layer utilities {
-  .flash-circle {
-    width: 0px;
-    height: 0px;
-    opacity: 0;
-    border: none;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 1s ease-in-out;
+  /* Body Style */
+  body {
+    @apply dark:bg-gradient-to-br dark:from-[rgb(37,0,36)] from-30% via-sky-300 dark:to-[rgb(37,0,36)] bg-gradient-to-tr from-green-100 from-10% via-sky-500 via-30% to-emerald-200 to-90% relative;
   }
   /* this is for nav bar */
   .nav-li {
-    @apply w-full h-full dark:bg-gradient-to-tl dark:from-[rgb(46,13,114)] dark:from-35% dark:to-gray-500 bg-indigo-500 text-white flex items-center justify-center rounded-lg;
+    @apply font-bold w-full h-full dark:bg-gradient-to-tl dark:from-[rgb(46,13,114)] dark:from-35% dark:to-gray-500 bg-indigo-500 text-white flex items-center justify-center rounded-lg;
   }
   .nav-li:hover {
     @apply bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-80% w-full dark:bg-gradient-to-br dark:from-[rgb(46,13,114)] dark:from-35% dark:to-gray-500;
   }
   .nav-ul-responsive {
-    @apply xs:gap-x-1 xs:text-[15px] xs:font-bold sm:gap-x-5 md:text-base md:py-0 sm:p-0;
+    @apply overflow-hidden font-bold 2xs:text-[6.5px] xs:text-[8px] 2xs:gap-x-1 xs:gap-x-1 sm:gap-x-5 md:text-base md:py-0 sm:p-0;
   }
 
   /* this is for my projects */
@@ -38,7 +31,7 @@
 
   /* this is for my blogs */
   .blog-item-full {
-    @apply h-[56px] hover:bg-none hover:bg-slate-300 bg-gradient-to-r from-slate-400 from-10% via-green-200 to-slate-100 dark:bg-gradient-to-br dark:from-[rgb(46,13,114)] dark:from-35% dark:to-gray-500 p-4 rounded-lg shadow-lg font-bold text-base text-zinc-700 truncate dark:text-white dark:hover:bg-none dark:hover:bg-slate-300;
+    @apply 2xs:text-[10px] h-auto hover:bg-none hover:bg-slate-300 bg-gradient-to-r from-slate-400 from-10% via-green-200 to-slate-100 dark:bg-gradient-to-br dark:from-[rgb(46,13,114)] dark:from-35% dark:to-gray-500 p-4 rounded-lg shadow-lg font-bold lg:text-[20px] sm:text-[20px] text-zinc-700 truncate dark:text-white dark:hover:bg-none dark:hover:bg-slate-300;
   }
   .blog-item-empty {
     @apply dark:bg-gray-950 bg-gray-300 animate-pulse text-transparent h-[56px] -z-10;
@@ -46,7 +39,7 @@
 
   /* this is for anime */
   .anime-item-full {
-    @apply bg-white p-4 rounded-lg shadow-lg grid xs:grid-cols-2 xs:grid-rows-2 sm:grid-rows-1 sm:grid-flow-col xs:grid-flow-row grid-cols-5 sm:grid-cols-5 items-center xs:my-3;
+    @apply bg-white rounded-lg shadow-lg flex 2xs:flex-col 2xs:m-0 2xs:p-0 2xs:text-xs sm:grid sm:grid-cols-5 sm:p-2;
   }
   .anime-item-empty {
     @apply bg-white p-4 rounded-lg shadow-lg grid grid-cols-5 items-center -z-10;
@@ -59,7 +52,7 @@
     @apply invisible;
   }
   .anime-img-full {
-    @apply w-auto h-[140px] bg-gray-300 border-2 border-sky-500;
+    @apply flex items-center w-auto h-full bg-gray-300 border-2 border-sky-500;
   }
   .anime-img-full img {
     @apply h-full w-full bg-cover;
@@ -72,7 +65,7 @@
     @apply invisible;
   }
   .anime-title-full {
-    @apply sm:text-center w-full h-full font-bold text-[18px] text-wrap flex items-center justify-center;
+    @apply sm:text-center text-[20px] w-full h-full font-bold text-wrap flex items-center justify-center;
   }
 
   .anime-desc-empty {
@@ -82,7 +75,7 @@
     @apply invisible;
   }
   .anime-desc-full {
-    @apply col-span-3 w-full h-full flex items-center flex-wrap text-justify;
+    @apply col-span-3 w-full h-full flex items-center flex-wrap text-justify text-[14px] lg:text-[20px];
   }
   .anime-desc-full p {
     @apply p-5;
@@ -90,6 +83,6 @@
 
   /* This is for Settings Pannel */
   .float-settings {
-    @apply fixed top-1/4 right-0 rounded-e-md shadow-md shadow-slate-700 w-9 bg-emerald-300 hover:w-20 transition-all duration-500 mt-2 mr-1;
+    @apply fixed top-2/4 right-0 rounded-e-md shadow-md shadow-slate-700 w-9 bg-emerald-300 hover:w-20 transition-all duration-500 mt-2 -mr-1;
   }
 }
