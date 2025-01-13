@@ -5,7 +5,7 @@
 @layer utilities {
   /* Body Style */
   body {
-    @apply dark:bg-gradient-to-br dark:from-[rgb(37,0,36)] from-30% via-sky-300 dark:to-[rgb(37,0,36)] bg-gradient-to-tr from-green-100 from-10% via-sky-500 via-30% to-emerald-200 to-90% relative;
+    @apply dark:bg-gradient-to-br dark:from-[rgb(37,0,36)] dark:from-30% dark:via-sky-300 dark:to-[rgb(37,0,36)] bg-gradient-to-tr from-green-100 from-10% via-sky-500 via-30% to-emerald-200 to-90% relative;
   }
   /* this is for nav bar */
   .nav-li {
