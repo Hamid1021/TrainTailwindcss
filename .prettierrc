@@ -15,7 +15,7 @@
       "files": "*.html",
       "options": {
         "parser": "html",
-        "printWidth": 160,
+        "printWidth": 300,
         "tabWidth": 4
       }
     },
